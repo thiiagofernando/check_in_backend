@@ -1,0 +1,20 @@
+CREATE TABLE Usuarios (
+    Id BIGSERIAL PRIMARY KEY,
+    Nome VARCHAR(100) NOT NULL,
+    Telefone VARCHAR(15) NOT NULL,
+    Email VARCHAR(100) UNIQUE NOT NULL,
+    Senha VARCHAR(32) NOT NULL,
+    TipoUsuario INT NOT NULL,
+    Ativo BOOLEAN NOT NULL,
+    CriadoEm TIMESTAMP NOT NULL
+);
+
+CREATE TABLE HorarioTreinos (
+    Id BIGSERIAL PRIMARY KEY,
+    NomeTreino VARCHAR(100) NOT NULL,
+    Data DATE NOT NULL,
+    HoraInicial TIME NOT NULL,
+    HoraFinal TIME NOT NULL,
+    QuantidadePessoas INT,
+    CriadoEm TIMESTAMP NOT NULL
+);
